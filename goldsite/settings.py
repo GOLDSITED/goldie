@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +31,7 @@ if DEBUG:
     STRIPE_PUBLISHABLE_KEY='pk_test_51J8DT3INBZ9p0pqiNlQLtzWQgmerA5TKn2bLcQzYl03pqAp8D4GSynpKHycrYhUEhBXuxCpsH6Cea97ltHPzlwdm009QpZENSU'
     STRIPE_SECRET_KEY='sk_test_51J8DT3INBZ9p0pqib3XnYuV3qavQR6yv6rHI9cnhLr8r42n7m2iTuAsY73ebaTDEdFiAF2LZRmKUNYS28ir5AleC00RXRVGBB7'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,6 +125,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -132,3 +135,4 @@ MEDIA_ROOT = BASE_DIR/'media'
 MEDIA_URL ='/media/'
 LOGIN_REDIRECT_URL = 'myapp:products'
 LOGIN_URL = 'users:login'
+django_heroku.settings(locals())
