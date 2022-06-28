@@ -22,7 +22,7 @@
         var stripe = Stripe('{{ stripe_publishable_key}}')
         var checkoutButton = document.getElementById('checkout')
         checkoutButton.addEventListener('click',function(){
-            fetch("{% url 'myapp:api_checkout_session' id=product.id %}",{method:'POST'})
+            fetch("{% url 'myapp:api_checkout_session' id=product.id %}",{method:'POST',})
             .then(function(response){           
                return response.json() 
             })
