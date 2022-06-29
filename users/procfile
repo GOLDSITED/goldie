@@ -1,1 +1,0 @@
-web gunicorn goldsite.wsgi:apllication --log-file -
