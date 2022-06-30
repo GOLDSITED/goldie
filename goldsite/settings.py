@@ -31,7 +31,7 @@ if DEBUG:
     STRIPE_PUBLISHABLE_KEY='pk_test_51J8DT3INBZ9p0pqiNlQLtzWQgmerA5TKn2bLcQzYl03pqAp8D4GSynpKHycrYhUEhBXuxCpsH6Cea97ltHPzlwdm009QpZENSU'
     STRIPE_SECRET_KEY='sk_test_51J8DT3INBZ9p0pqib3XnYuV3qavQR6yv6rHI9cnhLr8r42n7m2iTuAsY73ebaTDEdFiAF2LZRmKUNYS28ir5AleC00RXRVGBB7'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['omoobaapp.herokuapp.com']
 
 
 # Application definition
