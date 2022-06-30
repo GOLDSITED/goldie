@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['omoobaapp.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'web',
     'users',
     'myapp',
     'django.contrib.admin',
