@@ -37,3 +37,13 @@ def seller_profile(request,id):
         'seller':seller,
     }
     return render(request, 'users/sellerprofile.html',context)
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'users/profile.html')
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'users/contact.html', context)
