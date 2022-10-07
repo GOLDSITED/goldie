@@ -1,6 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
+from django.forms import ModelForm
+from .models import Contact
+
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True,widget=forms.EmailInput(attrs={'class':'focus:outline-none','placeholder':'daniel@gmail.com'}))
@@ -18,3 +21,8 @@ class NewUserForm(UserCreationForm):
             if commit:
                 user.save()
             return user 
+
+class ContactForm(ModelForm):
+class Meta:
+    model = Contact
+    fields = '__all__'
