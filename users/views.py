@@ -3,6 +3,9 @@ from .forms import NewUserForm
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib.auth.models import User
+from .forms import ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 # Create your views here.
 
 
